@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -16,6 +16,6 @@ def api():
         'status': 'success'
     })
 
-# Start the Flask server if the script is run directly
+# Vercel expects the Flask app to be callable directly without app.run()
 if __name__ == '__main__':
-    app.run(debug=True)
+    pass
